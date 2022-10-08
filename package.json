@@ -12,9 +12,8 @@
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --watch --runInBand",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|md|mdx|html)\"",
     "lint": "eslint . --cache-location node_modules/.cache/eslint",
-    "typecheck": "tsc --noEmit",
     "reset:db": "npm run reset",
-    "validate": "npm-run-all --parallel format lint typecheck build",
+    "validate": "npm-run-all --parallel format lint build",
     "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run --e2e --browser chrome",
     "cy:open-e2e": "concurrently -k yarn:start:api 'server-test 3000 cy:open'",
@@ -69,7 +68,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn typecheck && yarn test --watchAll=false && lint-staged"
+      "pre-commit": "yarn test --watchAll=false && lint-staged"
     }
   },
   "browserslist": {
