@@ -1,4 +1,4 @@
-[![unit-lint-typecheck-e2e-ct](https://github.com/muratkeremozcan/react-cypress-ts-template/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/muratkeremozcan/react-cypress-ts-template/actions/workflows/main.yml)
+[![unit-lint-e2e-ct](https://github.com/muratkeremozcan/react-cypress-ts-template/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/muratkeremozcan/react-cypress-ts-template/actions/workflows/main.yml)
 ![react version](https://img.shields.io/badge/react-18.2.0-brightgreen)
 ![react-scripts version](https://img.shields.io/badge/react--scripts-5.0.1-brightgreen)
 ![cypress version](https://img.shields.io/badge/cypress-10.9.0-brightgreen)
@@ -16,7 +16,7 @@ Microblog project from Functional React Book 3 by Christian Salcescu https://www
 ```bash
 yarn install --registry https://registry.yarnpkg.com # specify the registry in case you are using a proprietary registry
 
-# parallel unit, typecheck, lint, format
+# parallel unit, lint, format
 yarn validate
 
 # no need to have server running for these:
