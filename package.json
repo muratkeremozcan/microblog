@@ -68,7 +68,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test --watchAll=false && lint-staged"
+      "pre-commit": "yarn test --watchAll=false && lint-staged && yarn cy:run-ct-fast"
     }
   },
   "browserslist": {

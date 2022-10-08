@@ -11,9 +11,11 @@
   },
   "include": [
     "**/*.ts*",
-    "../cypress.d.ts",
+    "../cypress.d.js",
     "support/commands.js",
-    "support/component.js"
+    "support/component.js",
+    "support/e2e.js",
+    "e2e/spec.cy.js"
   ],
   "extends": "../jsconfig.json"
 }
