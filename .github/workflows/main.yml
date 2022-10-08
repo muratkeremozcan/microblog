@@ -1,4 +1,4 @@
-name: unit-lint-typecheck-e2e-ct
+name: unit-lint-e2e-ct
 on:
   push:
   workflow_dispatch:
@@ -63,19 +63,6 @@ jobs:
           CYPRESS_INSTALL_BINARY: 0
       - name: lint
         run: yarn lint
-
-  typecheck:
-    needs: install-dependencies
-    name: Run typecheck
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: bahmutov/npm-install@v1.8.23
-        with: {useRollingCache: true}
-        env:
-          CYPRESS_INSTALL_BINARY: 0
-      - name: typecheck
-        run: yarn typecheck
 
   cypress-e2e-test:
     # if you want to enable parallelization
