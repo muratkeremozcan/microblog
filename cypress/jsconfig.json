@@ -9,6 +9,13 @@
       "@fixtures/*": ["fixtures/*"]
     }
   },
-  "include": ["**/*.ts*", "../cypress.d.ts"],
-  "extends": "../tsconfig.json"
+  "include": [
+    "**/*.ts*",
+    "../cypress.d.js",
+    "support/commands.js",
+    "support/component.js",
+    "support/e2e.js",
+    "e2e/spec.cy.js"
+  ],
+  "extends": "../jsconfig.json"
 }

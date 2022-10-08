@@ -1,0 +1,12 @@
+[
+  {
+    "userId": 2,
+    "followerId": 1,
+    "id": 1
+  },
+  {
+    "userId": 1,
+    "followerId": 3,
+    "id": 2
+  }
+]
