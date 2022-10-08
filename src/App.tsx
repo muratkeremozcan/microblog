@@ -1,23 +1,11 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Container from '@material-ui/core/Container'
+import Login from './user/Login'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p data-cy="greeting">Hello.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Login login={console.log} />
+    </Container>
   )
 }
 

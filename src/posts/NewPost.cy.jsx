@@ -4,6 +4,10 @@ describe('NewPost', () => {
   it('should submit a new post', () => {
     cy.mount(<NewPost addPost={cy.stub().as('addPost')} />)
 
+    cy.get('[aria-invalid="false"]').should('have.length', 2)
+    cy.getByCy('submit').click()
+    cy.get('[aria-invalid="true"]').should('have.length', 2)
+
     const title = 'Hello World'
     const content = 'This is my first post'
 

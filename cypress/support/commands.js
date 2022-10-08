@@ -9,3 +9,11 @@ Cypress.Commands.add('getByCyLike', (selector, ...args) =>
 Cypress.Commands.add('getByClassLike', (selector, ...args) =>
   cy.get(`[class*=${selector}]`, ...args),
 )
+
+Cypress.Commands.add('nInValidFormFields', n =>
+  cy.get('[aria-invalid="true"]').should('have.length', n),
+)
+
+Cypress.Commands.add('nValidFormFields', n =>
+  cy.get('[aria-invalid="false"]').should('have.length', n),
+)

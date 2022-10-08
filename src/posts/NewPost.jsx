@@ -1,21 +1,29 @@
-import React, {useState} from 'react'
 import Box from '@material-ui/core/Box'
 import FormControl from '@material-ui/core/FormControl'
 import FormGroup from '@material-ui/core/FormGroup'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import {useFormState} from '../shared/useFormState'
 
 export default function NewPost({addPost}) {
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+  const [state, setInputValue, validate] = useFormState({
+    title: {
+      value: '',
+      required: true,
+    },
+    content: {
+      value: '',
+      required: true,
+    },
+  })
 
-  const handleTitleChange = e => setTitle(e.target.value)
-  const handleContentChange = e => setContent(e.target.value)
   const submitForm = () =>
-    addPost({
-      title,
-      content,
-    })
+    validate()
+      ? addPost({
+          title: state.title.value,
+          content: state.content.value,
+        })
+      : null
 
   return (
     <form data-cy="new-post">
@@ -25,8 +33,10 @@ export default function NewPost({addPost}) {
             data-cy="title"
             label="Title"
             name="title"
-            value={title}
-            onChange={handleTitleChange}
+            value={state.title.value}
+            onChange={setInputValue}
+            error={!!state.title.error}
+            helperText={state.title.error}
           />
         </FormControl>
       </FormGroup>
@@ -36,8 +46,10 @@ export default function NewPost({addPost}) {
           data-cy="content"
           label="Share your thoughts"
           name="content"
-          value={content}
-          onChange={handleContentChange}
+          value={state.content.value}
+          onChange={setInputValue}
+          error={!!state.content.error}
+          helperText={state.content.error}
           multiline
           rows={4}
         ></TextField>

@@ -4,6 +4,11 @@
     "lib": ["esnext", "dom"],
     "types": ["cypress", "node", "@testing-library/cypress"]
   },
-  "include": ["**/*.ts*", "../cypress.d.ts", "posts/Timeline.cy.jsx"],
+  "include": [
+    "**/*.ts*",
+    "../cypress.d.ts",
+    "posts/Timeline.cy.jsx",
+    "index.jsx"
+  ],
   "extends": "../jsconfig.json"
 }
