@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
+import {connect} from 'react-redux'
+import effects from './effects'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Link from '@material-ui/core/Link'
@@ -9,7 +11,7 @@ import FormGroup from '@material-ui/core/FormGroup'
 import Container from '@material-ui/core/Container'
 import {useFormState} from '../shared/useFormState'
 
-export default function Login({login}) {
+export function Login({login}) {
   const [state, setInputValue, validate] = useFormState({
     email: {
       value: '',
@@ -128,3 +130,6 @@ export default function Login({login}) {
     </Container>
   )
 }
+
+// TODO: fix these imports and just connect the effect you need, which is login
+export default connect(null, {...effects})(Login)

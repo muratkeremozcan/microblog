@@ -11,7 +11,11 @@
 [renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
 [renovate-app]: https://renovateapp.com/
 
-Microblog project from Functional React Book 3 by Christian Salcescu https://www.amazon.com/Microblog-React-Project-Functional/dp/B0914WWGVP.
+Microblog project from Functional React Book 3 by Christian Salcescu
+https://www.amazon.com/Microblog-React-Project-Functional/dp/B0914WWGVP.
+
+Mainly this is an example of using Redux Toolkit with React, Cypress CT and E2e
+tests.
 
 ```bash
 yarn install --registry https://registry.yarnpkg.com # specify the registry in case you are using a proprietary registry
@@ -40,4 +44,7 @@ build  -->  Cypress e2e test
        -->  Unit test
 ```
 
-> When updating packages, make sure that `react-scripts` and `jest` versions stay compatible. Ex: `react-scripts` latest version uses `jest v27`, but `jest`'s latest version is `29`. Double check node modules or `react-scripts` docs. The incompatibility may cause tools like WallabyJs to malfunction.
+> When updating packages, make sure that `react-scripts` and `jest` versions
+> stay compatible. Ex: `react-scripts` latest version uses `jest v27`, but
+> `jest`'s latest version is `29`. Double check node modules or `react-scripts`
+> docs. The incompatibility may cause tools like WallabyJs to malfunction.

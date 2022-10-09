@@ -1,3 +1,4 @@
+import React from 'react'
 import PeopleSearch from './PeopleSearch'
 import PeopleList from './PeopleList'
 
