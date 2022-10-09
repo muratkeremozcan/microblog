@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
-    "start:api": "json-server-auth db.json --watch db.json --port 3001 --delay 1000 --routes routes.json --middlewares ./node_modules/json-server-reset",
+    "start:api": "json-server-auth db.json --watch db.json --port 4000 --delay 1000 --routes routes.json --middlewares ./node_modules/json-server-reset",
     "dev": "concurrently -k yarn:start yarn:start:api",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -23,15 +23,19 @@
     "cy:run-ct-fast": "yarn cy:run-ct --config video=false screenshot=false"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "6.4.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "3.0.3",
     "@material-ui/core": "4.12.4",
     "@material-ui/icons": "4.11.3",
+    "@reduxjs/toolkit": "^1.8.6",
     "@types/ramda": "0.28.15",
-    "ramda": "0.28.0"
+    "axios": "^1.1.2",
+    "ramda": "0.28.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "6.4.2",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "web-vitals": "3.0.3"
   },
   "devDependencies": {
     "@testing-library/cypress": "8.0.3",
@@ -54,6 +58,7 @@
     "eslint-plugin-cypress": "2.12.1",
     "eslint-plugin-no-only-tests": "3.0.0",
     "eslint-plugin-prettier": "4.2.1",
+    "@faker-js/faker": "7.5.0",
     "husky": "4.3.8",
     "jest": "27.5.1",
     "jest-environment-jsdom": "27.5.1",
