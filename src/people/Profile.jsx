@@ -5,7 +5,7 @@ import PeopleList from './PeopleList'
 
 export default function Profile({user, followingList, followerList}) {
   return (
-    <React.Fragment data-cy="profile">
+    <div data-cy="profile">
       <Avatar alt={user.name}>{user.name.charAt(0)}</Avatar>
 
       <Typography variant="h5" gutterBottom>
@@ -21,6 +21,6 @@ export default function Profile({user, followingList, followerList}) {
 
       <Typography variant="h6">{followerList.length} Followers</Typography>
       <PeopleList people={followerList} />
-    </React.Fragment>
+    </div>
   )
 }

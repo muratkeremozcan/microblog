@@ -9,7 +9,7 @@ describe('Profile', () => {
 
     cy.mount(
       <Profile
-        user={people[0]}
+        user={user}
         followingList={followingList}
         followerList={followerList}
       />,
