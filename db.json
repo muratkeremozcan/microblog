@@ -40,6 +40,12 @@
       "password": "$2a$10$P2oGuzzvklNf51W4Widt9e980kS394DJ1NgvhtCuvDMeuuYRzLOnS",
       "name": "Mark",
       "id": 3
+    },
+    {
+      "email": "Pink.Stoltenberg90@yahoo.com",
+      "password": "$2a$10$cV0O4C6JE5Wv9VDWdvz3fuFQ07/Aad6J.ngl82oQRT9IdvRADR1eC",
+      "name": "Shyann",
+      "id": 4
     }
   ],
   "followers": [
